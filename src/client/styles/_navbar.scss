@@ -1,0 +1,33 @@
+.navbar {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 0.2rem 2rem;
+	position: fixed;
+	z-index: 1;
+	width: 100%;
+	top: 0;
+	background-color: $primary-color;
+	opacity: 0.9;
+	.logo,
+	.dot {
+		color: $secondary-color;
+	}
+	ul {
+		display: flex;
+		list-style: none;
+		justify-content: center;
+		li {
+			padding: 0 10px;
+			@media screen and (max-width: 700px) {
+				font-size: 20px;
+				padding: 0 5px;
+			}
+		}
+	}
+	@media screen and (max-width: 700px) {
+		display: block;
+		text-align: center;
+		padding: 0.7rem 0;
+	}
+}

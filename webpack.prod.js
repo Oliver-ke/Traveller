@@ -9,10 +9,6 @@ const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 
 module.exports = {
 	entry: './src/client/index.js',
-	output: {
-		libraryTarget: 'var',
-		library: 'Client'
-	},
 	mode: 'production',
 	optimization: {
 		minimizer: [ new TerserJSPlugin({}), new OptimizeCSSAssetsPlugin({}) ]
@@ -31,6 +27,13 @@ module.exports = {
 					'css-loader',
 					'sass-loader'
 				]
+			},
+			{
+				test: /\.(png|jpe?g|gif)$/i,
+				loader: 'file-loader',
+				options: {
+					outputPath: 'assets'
+				}
 			}
 		]
 	},
@@ -51,7 +54,7 @@ module.exports = {
 			// Automatically remove all unused webpack assets on rebuild
 			cleanStaleWebpackAssets: true,
 			protectWebpackAssets: false
-		}),
-		new WorkboxPlugin.GenerateSW()
+		})
+		//new WorkboxPlugin.GenerateSW()
 	]
 };

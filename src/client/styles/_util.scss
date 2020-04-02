@@ -1,0 +1,35 @@
+.indicator {
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+	align-items: center;
+	.spinner {
+		width: 2rem;
+		height: 2rem;
+		border: 3px solid rgba(0, 0, 0, .25);
+		border-top-color: rgba(255, 255, 255, .5);
+		border-radius: 50%;
+		animation: rotation .8s ease infinite;
+		margin-bottom: 1rem;
+		display: none;
+		&.show-spinner {
+			display: block;
+		}
+	}
+	span {
+		color: red;
+		display: none;
+		&.show-error {
+			display: block;
+		}
+	}
+}
+
+@keyframes rotation {
+	from {
+		transform: rotate(0deg);
+	}
+	to {
+		transform: rotate(360deg);
+	}
+}
