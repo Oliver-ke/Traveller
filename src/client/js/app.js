@@ -47,6 +47,7 @@ const getTripHandler = async (e) => {
 	uiManager('CLEAR_ERROR', errorEle);
 	uiManager('START_SPINNER', spinnerEle);
 
+	// get location search coodinate using the geo api
 	const geoUrl = composeUrl('GEONAMES', location, baseUrls, keys);
 	const { error, data } = await fetchData(geoUrl, fetch);
 
@@ -106,6 +107,7 @@ const saveTripHandler = (e) => {
 	if (lastItem.input.location == usersResource.input.location) {
 		return alert('Trip already saved');
 	}
+	// update localstorage
 	const payload = JSON.stringify([ ...exitingItems, usersResource ]);
 	localStorage.setItem('trips', payload);
 	return alert('Trip saved Successfully');

@@ -1,5 +1,6 @@
 import { handleDeleteSavedTrip } from './app';
 
+// this function handles ui update for different cases
 const uiManager = (action, element = null, data = null) => {
 	switch (action) {
 		case 'START_SPINNER': {
@@ -135,9 +136,6 @@ const uiManager = (action, element = null, data = null) => {
 						<span>Temperature:</span> ${temp}°C <br>
 					</p>
 				`;
-				// <button data-id="${input.location}" class="btn delete-trip danger">
-				// 		<i class="fas fa-times"></i>
-				// 	</button>
 				tripElement.appendChild(deleteBtn);
 				element.appendChild(tripElement);
 			});
