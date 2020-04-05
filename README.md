@@ -20,7 +20,7 @@
  - [Rest Countries](http://restcountries.eu/)
 
 ### steps needed to setup project
- - clone this repository `git clone http://github.com/oliver-ke/nlp-app
+ - clone this repository `git clone http://github.com/oliver-ke/Traveller`
  - install dependencies `npm install`
  - Run a production build using `npm run build`
  - start the server using `npm run start`
