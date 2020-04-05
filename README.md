@@ -2,6 +2,12 @@
  - This is a travel app that provides travellers weather information about their destination location
  - this app provies it users with the following information
  - `Weather forcast` `country details` `pictures` and `flag`
+
+### screenshots
+![Repo img](./github_readme_assets/scr1.PNG "Home screen")
+![Repo img](./github_readme_assets/scr2.PNG "Trip screen")
+![Repo img](./github_readme_assets/scr3.PNG "Saved trip screen")
+
 ### Tools used
  - Node & Express
  - 3rd party API
@@ -19,10 +25,6 @@
  - [Pixabay](https://pixabay.com/api/docs)
  - [Rest Countries](http://restcountries.eu/)
 
-### screenshots
-![Repo img](./github_readme_assets/scr1.PNG "Home screen")
-![Repo img](./github_readme_assets/scr2.PNG "Trip screen")
-![Repo img](./github_readme_assets/scr3.PNG "Saved trip screen")
 
 ### steps needed to setup project
  - clone this repository `git clone http://github.com/oliver-ke/Traveller`
