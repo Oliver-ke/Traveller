@@ -4,17 +4,19 @@
 @import './variables';
 @import './navbar';
 @import './util';
+@import './trip';
+@import './saved-trips';
+@import './buttons';
 
 * {
 	box-sizing: border-box;
 	margin: 0;
 	padding: 0;
-	overflow: hidden;
 }
 
 body {
 	font-family: 'Montserrat', sans-serif;
-	background: $primary-color;
+	background: #fff;
 	color: #000;
 	font-size: 18px;
 	line-height: 1.6;
@@ -29,4 +31,9 @@ body {
 		text-decoration: none;
 		color: #fff;
 	}
+}
+
+section {
+	position: relative;
+	display: none;
 }

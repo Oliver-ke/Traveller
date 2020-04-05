@@ -6,7 +6,7 @@ const fetchData = async (url, parser) => {
 		const data = await res.json();
 		return { error: null, data };
 	} catch (error) {
-		console.log(error);
+		console.log(`${error} ${url}`);
 		return { error: error, data: null };
 	}
 };

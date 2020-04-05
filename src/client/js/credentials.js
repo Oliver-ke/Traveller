@@ -5,10 +5,10 @@ const keys = {
 };
 
 const baseUrls = {
-	GEONAMES: ' http://api.geonames.org/postalCodeSearchJSON',
+	GEONAMES: 'http://api.geonames.org/searchJSON',
 	WEATHERBIT: 'https://api.weatherbit.io/v2.0/forecast/daily',
 	PIXABAY: 'https://pixabay.com/api/',
-	RESTCOUNTRY: ''
+	RESTCOUNTRY: 'https://restcountries.eu/rest/v2/name'
 };
 
 export { keys, baseUrls };

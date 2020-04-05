@@ -6,6 +6,7 @@ const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin');
 const TerserJSPlugin = require('terser-webpack-plugin');
 const WorkboxPlugin = require('workbox-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
+const CopyWebpackPlugin = require('copy-webpack-plugin');
 
 module.exports = {
 	entry: './src/client/index.js',
@@ -34,6 +35,10 @@ module.exports = {
 				options: {
 					outputPath: 'assets'
 				}
+			},
+			{
+				test: /\.(html)$/,
+				use: [ 'html-loader' ]
 			}
 		]
 	},
@@ -46,6 +51,9 @@ module.exports = {
 			filename: '[name].css',
 			chunkFilename: '[id].css'
 		}),
+		new CopyWebpackPlugin([
+			{ from: './src/client/media/icons', to: 'icons' }
+		]),
 		new CleanWebpackPlugin({
 			// Simulate the removal of files
 			dry: true,
@@ -54,7 +62,7 @@ module.exports = {
 			// Automatically remove all unused webpack assets on rebuild
 			cleanStaleWebpackAssets: true,
 			protectWebpackAssets: false
-		})
-		//new WorkboxPlugin.GenerateSW()
+		}),
+		new WorkboxPlugin.GenerateSW()
 	]
 };

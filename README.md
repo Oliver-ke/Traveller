@@ -1,33 +1,39 @@
 ### project description
- - This is a new's application that makes use of Natural Language Processing(NLP) to analyse text content,
- this app uses the [Aylien API](https://aylien.com) 
-
-
+ - This is a travel app that provides travellers weather information about their destination location
+ - this app provies it users with the following information
+ - `Weather forcast` `country details` `pictures` and `flag`
 ### Tools used
  - Node & Express
- - Aylien SDK
+ - 3rd party API
  - webpack
  - babel
  - JavaScript
  - html
  - scss
  - service walker
+ - Jest
+
+### 3rd party API's used
+ - [Geonames](https://www.geonames.org/export/geonames-search.html)
+ - [WeatherBit](https://www.weatherbit.io/api)
+ - [Pixabay](https://pixabay.com/api/docs)
+ - [Rest Countries](http://restcountries.eu/)
 
 ### steps needed to setup project
  - clone this repository `git clone http://github.com/oliver-ke/nlp-app
  - install dependencies `npm install`
- - create a `.env` file the root of this project
- - register and get an API details from ([here](https://developer.aylien.com/signup)) 
- - rename `.env.example` to `.env` file and add your approprite keys
- - `APP_ID` and `APP_KEY`
- - Run a production build using `npm run build-prod`
+ - Run a production build using `npm run build`
  - start the server using `npm run start`
  - open your browser and navigate to `http://localhost:5000`
  - You should see the app
 
+### Added features
+ - Users can save trips
+ - Users will get weather forcast for multiple days
+
 ### Student
  - `name:` Azorji Kelechi Oliver
  - `Course:` Udacity frontend course
- - `Date:` 01/04/2020
+ - `Date:` 05/04/2020
 
 #### @2020 Udacity frontend course

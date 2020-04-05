@@ -1,9 +1,12 @@
 @import './variables';
 
 .landing {
-	position: relative;
 	background: url('../media/arportbg.jpg') no-repeat center center/cover;
 	height: 100vh;
+	overflow: hidden;
+	&.active {
+		display: block;
+	}
 	.dark-overlay {
 		height: 100%;
 		width: 100%;
